@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Cave.png" type="Texture" id=1]
+[ext_resource path="res://Shit.gd" type="Script" id=2]
+[ext_resource path="res://Toilet.gd" type="Script" id=3]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/Ass.png-a31aeee307ea2fd1a3127b4b64031f32.stex"
+
+[sub_resource type="StreamTexture" id=2]
+load_path = "res://.import/Toilet.png-933515c1dd35cfab55ad47a8c48e5e27.stex"
+
+[sub_resource type="StreamTexture" id=3]
+load_path = "res://.import/Shit.png-ebe2ca2bc77e6600e525696d35d4018c.stex"
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Cave" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Ass" type="Sprite" parent="."]
+position = Vector2( 256, 224 )
+texture = SubResource( 1 )
+centered = false
+offset = Vector2( -64, -64 )
+flip_h = true
+
+[node name="Toilet" type="Sprite" parent="."]
+position = Vector2( 137, 92 )
+texture = SubResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Shit" type="Sprite" parent="."]
+position = Vector2( 88, 96 )
+texture = SubResource( 3 )
+script = ExtResource( 2 )
